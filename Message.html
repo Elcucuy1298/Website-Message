@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 100px;
+            background-color: rgb(217, 236, 217); /* Set the background color to green */
+        }
+
+        /* Adjust the size of the input boxes proportionally */
+        input[type="text"],
+        input[type="password"] {
+            width: 60%; /* Make the input boxes take up 60% of the available width */
+            max-width: 400px; /* Limit the maximum width to 400px */
+            height: 40px; /* Set the input box height */
+            font-size: 20px; /* Increase the font size */
+        }
+
+        /* Increase the size of the login button */
+        input[type="button"] {
+            width: 150px; /* Make the button wider */
+            height: 50px; /* Make the button taller */
+            font-size: 18px; /* Increase the font size */
+        }
+
+        /* Style the message display */
+        #message {
+            font-size: 26px;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello!</h1>
+    
+    <form id="loginForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Your Name"><br><br>
+        
+        <label for="password">Date:</label>
+        <input type="password" id="password" name="password" required placeholder="Anniversary"><br><br>
+        
+        <input type="button" value="Login" onclick="login()">
+    </form>
+
+    <div id="message" style="display: none;">
+        <h2>Hi, kumusta? Masaya ako na makapag sulat para sayo. Alam ko na ang sulat na to ay itatabi mo. Gusto ko sabihin na masaya ako na nakilala ka, masaya ako na tinanggap at pinili mo ako. Sa kabila ng maraming pag kukulang ko ay mas pinili mo na maging mapang unawa. Maraming salamat sa pagmamahal na walang hinihinging apalit. Pangarap ko na makasama ka for eternity. Maraming salamat sa palaging pagpapaalala saakin kapag napang hihinaan ako. Maraming salamat dahil lagi kang nandiyan. 
+            Mahal kita at palagi kitang pipiliin na makasama kahit marami man ang problema.
+            Sorry Be sa mga nagawa ko. Mas magiging aware na ko at maingat dahil ayuko rin na nasasaktan ka at ayuko na umiiyak ka. Sorry dahil nasaktan kita sa ginawa ko.  I hope maging okay na tayo at bumalik sa dati ang naramdaman mo sakin. Maraming salamat Joyce. Na appreciate ko na nakausap kita kanina. Wag mo isipin na di kita mahal. Mahal kita Joyce. I always pray for your safety and na maging happy ka. Well work this out together walang mag iiwanan.</h2>
+    </div>
+
+    <script>
+        function login() {
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+            var loginForm = document.getElementById("loginForm");
+            var messageDiv = document.getElementById("message");
+
+            if (name === "Joyce Glori" && password === "042223") {
+                // Hide the login form and show the message
+                loginForm.style.display = "none";
+                messageDiv.style.display = "block";
+            } else {
+                alert("Login Failed. Incorrect name or password.");
+            }
+        }
+    </script>
+</body>
+</html>
